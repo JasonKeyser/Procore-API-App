@@ -4,6 +4,7 @@ from pprint import pprint
 import pandas as pd
 import math
 
+# Various calls to endpoints which I find most useful
 
 def get_company_id(access_token, base_url):
     headers = { 'Authorization': f"Bearer {access_token}" }
@@ -20,23 +21,6 @@ def get_my_user_id(access_token, base_url):
     response = requests.request("GET", f'{base_url}/rest/v1.0/me', headers=headers)
     response_json = response.json()
     return response_json['id']
-
-
-
-def get_user_id_binary_find(user_list, target):
-    start = 0
-    end = len(user_list) - 1
-
-    while start <= end:
-        middle = int((start + end)/ 2)
-        middle_item = user_list[middle]
-        midpoint = middle_item['name']
-        if midpoint > target:
-            end = middle - 1
-        elif midpoint < target:
-            start = middle + 1
-        else:
-            return middle_item['id']
 
 
 def get_project_id(access_token, base_url, project_name):
@@ -310,9 +294,9 @@ def add_user_to_company_directory(access_token, base_url, new_user, vendor_id):
             "last_name": new_user['Contact Last Name'],
             "email_address": new_user['Email'],
             "is_active": True,
-            "is_employee": False, # add a check to see if the employee is actually cpg first
+            "is_employee": False, # you could add a check to see if the person is an internal employee or or not
             "default_permission_template_id": default_permissions_template_id,
-            "company_permission_template_id": 811636, # this is the template id for No Administrative Rights # maybe not?????
+            "company_permission_template_id": 811636, # this is the template id for No Administrative Rights (at least on my company's site.)
             "vendor_id": vendor_id
         }
     }
