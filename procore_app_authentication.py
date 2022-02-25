@@ -57,7 +57,11 @@ def is_access_token_expired(expiration):
 def get_oauth_access():
     login_url_real = 'https://login.procore.com/oauth'
     base_url = 'https://api.procore.com'
-
+    
+    # Obtain cliend id and client secret by creating a Procore Developer Account
+    # and following instructions to make your own App. www.procoredeveloper.com
+    # you will need an admin on your Procore site to connect your app to the site.
+    
     client_id_real = "YOUR CLIENT ID HERE"
     client_secret_real = "YOUR CLIENT SECRET HERE"
     redirect_uri = 'urn:ietf:wg:oauth:2.0:oob'
