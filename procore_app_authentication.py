@@ -61,7 +61,7 @@ def get_oauth_access():
     client_id_real = "YOUR CLIENT ID HERE"
     client_secret_real = "YOUR CLIENT SECRET HERE"
     redirect_uri = 'urn:ietf:wg:oauth:2.0:oob'
-    credentials_path = '12.21.21 creds.pickle'
+    credentials_path = 'creds.pickle'
     auth_url_real = f'{login_url_real}/authorize?response_type=code&client_id={client_id_real}&redirect_uri={redirect_uri}'
 
 
