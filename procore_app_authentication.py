@@ -30,7 +30,6 @@ def trade_authorization_code(client_id, client_secret, redirect_uri,login_url, a
 
 def refresh_access_token(access_token, client_id, redirect_uri, client_secret, refresh_token, login_url_real):
     headers = {"Authorization": "Bearer " + access_token}
-    # do the headers actually matter?
     data = {
     "grant_type":"refresh_token",
     "client_id": client_id,
