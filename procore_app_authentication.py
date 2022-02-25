@@ -57,10 +57,9 @@ def is_access_token_expired(expiration):
 def get_oauth_access():
     login_url_real = 'https://login.procore.com/oauth'
     base_url = 'https://api.procore.com'
-    #refresh_token_url_sandbox = 'https://login-sandbox.procore.com/users/refreshtoken'
 
-    client_id_real = '6e65bf6886ab4e34e95f5676ff6cbfba72965f4698af6acafd27ea4461187357'
-    client_secret_real = 'ac0c53993aea60f433c45c316272a8728f66dd228f59071657fa023b285baeb6'
+    client_id_real = "YOUR CLIENT ID HERE"
+    client_secret_real = "YOUR CLIENT SECRET HERE"
     redirect_uri = 'urn:ietf:wg:oauth:2.0:oob'
     credentials_path = '12.21.21 creds.pickle'
     auth_url_real = f'{login_url_real}/authorize?response_type=code&client_id={client_id_real}&redirect_uri={redirect_uri}'
