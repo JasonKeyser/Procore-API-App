@@ -10,7 +10,7 @@ Follow the instructions to create your own internal app, and receive client id a
 (This process can be a little confusing. I found helpful videos in the Procore API module within the Procore Certifications
 section of my company's website. The documentation about the API in the Procore Developer Portal was also useful).
 
-Once you have obtained credentials, you can use these scripts to authenticate with your companies site using OAUTH2 protocal
+Once you have obtained credentials, you can use these scripts to authenticate with your company's site using OAUTH2 protocal
 and make a variety of calls to useful API endpoints.
 
 You can create a sandbox app to test and understand how making calls will work. Note, in order to create
